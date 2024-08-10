@@ -10,6 +10,9 @@ import Trippayment from "../pages/trippayment";
 import ProtectedRoute from "./protected";
 import Success from "../pages/success";
 import Failed from "../pages/failed";
+import Profile from "../pages/profile";
+import ProfileForm from "../components/profileform";
+import Trips from "../components/trips";
 
 const UserRoutes = ()=>{
     return(
@@ -25,6 +28,10 @@ const UserRoutes = ()=>{
             <Route path="/trip-payment" element={<Trippayment/>}/>
             <Route path="/checkout-success" element={<Success/>}/>
             <Route path="/checkout-failed" element={<Failed/>} />
+             <Route path="/profile" element={<Profile/>}>
+                <Route index element={<ProfileForm/>}/>
+                <Route path="trips" element={<Trips/>}/>
+             </Route>
             </Route>
         </Routes>
     )

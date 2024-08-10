@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'ga-maamli-regular':'"Ga Maamli", sans-serif;'
+        'ga-maamli-regular':'"Ga Maamli", sans-serif;',
+        'cursive':'"Caveat", cursive;'
       }
     },
   },

@@ -9,8 +9,9 @@ function Homepage() {
   const [istoggle,setToggle] = useState(false)
   return (
     <div>
-      <div className="min-h-screen bg-cover" style={{ backgroundImage: `url(${home})` }}>
+      <div className="min-h-screen bg-cover relative" style={{ backgroundImage: `url(${home})` }}>
         <Header />
+        <p className='absolute font-cursive top-[20rem] md:top-[28rem] left-8 text-[4.6rem] md:text-6xl leading-tight'>Enjoy The Freedom Of <span className='text-[6rem] md:text-[8rem]'>Limitless</span></p>
       </div>
       <div className='bg-gradient-to-r from-amber-200 to-orange-200 px-5'>
         <div className='pt-10  md:ml-40 md:pb-24 flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12'>

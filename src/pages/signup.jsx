@@ -6,7 +6,7 @@ import signup from '../assets/login.jpg';
 import Footer from '../components/footer';
 import signupschema from '../schemas/signup';
 import requests from '../constant/requests';
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Signup() {
@@ -37,6 +37,8 @@ function Signup() {
             toast.success("success");
          }
          else{
+            console.log(responseData)
+            toast.success("Email Already Exist")
             throw new Error(response.status)
          }
       console.log(responseData)
@@ -64,8 +66,9 @@ function Signup() {
        <Header/>
        <div className='min-h-screen'>
        <div className='flex  justify-center mt-[10rem] mb-12'>
-           <div className='bg-gray-900 flex justify-center w-[30rem] bg-opacity-65'>
-            <form className='mt-16   flex flex-col w-[20rem] gap-5' onSubmit={handleSubmit}>
+           <div className='bg-gray-900 flex flex-col  items-center w-[30rem] bg-opacity-65'>
+            <p className='mt-10 text-2xl text-white' >Sign Up</p>
+            <form className='mt-10   flex flex-col w-[20rem] gap-5' onSubmit={handleSubmit}>
               
               <div>
               <input className={`w-[20rem] outline-none rounded-3xl px-8 py-3 ${errors.profile_name&&touched.profile_name?'outline-3 outline-red-500':''}`}  id="profile_name"  name="profile_name"  type="text" onChange={handleChange}
@@ -92,6 +95,7 @@ function Signup() {
               
                <button className='bg-stone-800 hover:bg-stone-950 py-3 rounded-3xl text-white' type="submit">Submit</button>
             </form>
+            <p className='mt-6 text-white text-[1.3rem]'>Already Registered?<span className='text-[2rem] ml-3 cursor-pointer'><Link to='/signin'>Signin</Link> </span></p>
            </div>
            <div>
             <img className='w-[30rem] h-[35rem]' src={signup}/>

@@ -7,9 +7,11 @@ const requests = {
     verifyOtp:BASEURL+"customer/verify_otp/",
     getProfile:BASEURL+"customer/me",
     login:BASEURL+"customer/login/",
+    getbookings:BASEURL+"customer/me/get_trip_booking/",
     confirmBooking:BASEURL+"booking/trips/",
     getTripbooking:BASEURL+ "booking/trips/?booking_id=",
-    checkout:BASEURL+"booking/trips/checkout/"
+    checkout:BASEURL+"booking/trips/checkout/",
+    paymentSuccess:BASEURL+"booking/trips/success_payment/"
 }
 
 export default requests
