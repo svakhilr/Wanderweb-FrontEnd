@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import bckg from '../assets/background.jpg'
+import bckg from '../assets/travel.jpg'
 import requests from '../constant/requests'
 import { useFormik } from 'formik';
 import bookingSchema from '../schemas/bookingschema'
@@ -106,7 +106,8 @@ function Tripbooking() {
         tripData ?
             (<div>
                 <div className='min-h-screen bg-cover relative' style={{ backgroundImage: `url(${bckg})` }}>
-                    <Header />
+                <p className='absolute font-metamise text-[8rem] top-[20rem] left-[10%]'>Make Your Trip On!!!!!</p>
+                <Header />
                 </div>
                 <div className='my-6  mb-16 px-14'>
                     <p className='font-mono text-2xl font-bold'>Booking Details</p>

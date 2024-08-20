@@ -55,7 +55,7 @@ function Header() {
         </ul>
         {isloggedin?
         <div className='hidden lg:flex gap-14'>
-        <p className=' flex items-center gap-2  font-bold hover:opacity-25'><RiAliensFill /> Hello {profileName}</p>
+        <Link to="/profile"> <p className=' flex items-center gap-2 cursor-pointer  font-bold hover:opacity-25'> <RiAliensFill />  Hello {profileName}</p> </Link>
         <p onClick={logOut} className='cursor-pointer font-bold hover:opacity-25'>Logout</p>
         </div>
         :

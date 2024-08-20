@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily:{
         'ga-maamli-regular':'"Ga Maamli", sans-serif;',
-        'cursive':'"Caveat", cursive;'
+        'cursive':'"Caveat", cursive;',
+        'metamise':'"Matemasie", sans-serif;'
       }
     },
   },

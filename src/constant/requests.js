@@ -1,4 +1,4 @@
-const BASEURL = 'http://127.0.0.1:8000/api/'
+const BASEURL = 'http://65.1.92.55/api/'
 
 const requests = {
     tokenRefresh:BASEURL+"token/refresh/",
