@@ -3,7 +3,7 @@ import Header from '../components/header'
 import home from '../assets/home.png'
 import Travelcard from '../components/travelcard'
 import Footer from '../components/footer'
-import Sidebar from '../components/sidebar'
+
 
 function Homepage() {
   const [istoggle,setToggle] = useState(false)

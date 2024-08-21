@@ -37,7 +37,7 @@ function Tripdetail() {
     return (data ?
         <div className=''>
             <div className="min-h-screen relative  bg-cover" style={{ backgroundImage: `url(${data.package_banner_image})` }}>
-                <p className='absolute font-metamise text-[10rem] top-[17rem]  left-[20%]'>{data.package_name}</p>
+                <p className='absolute font-metamise text-[5rem] md:text-[10rem] top-[17rem]  left-[10%] md:left-[20%]'>{data.package_name}</p>
                 <Header />
                 <div className='hidden absolute top-[91%] md:flex flex-col justify-center items-center gap-3 right-48 border-2 rounded-md  border-black w-[16rem] bg-white p-5'>
                     <p className='text-2xl font-bold '>₹ {data.price_per_head}</p>

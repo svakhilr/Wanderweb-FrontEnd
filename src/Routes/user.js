@@ -13,6 +13,7 @@ import Failed from "../pages/failed";
 import Profile from "../pages/profile";
 import ProfileForm from "../components/profileform";
 import Trips from "../components/trips";
+import About from "../pages/about";
 
 const UserRoutes = ()=>{
     return(
@@ -23,6 +24,7 @@ const UserRoutes = ()=>{
             <Route path="/otp/verify" element={<Otp/>}/>
             <Route path="/trips" element={<Tripspage/>}/>
             <Route path="/tripdetail/:id" element={<Tripdetail/>}/>
+            <Route path="/about-us" element={<About/>}/>
             <Route element={<ProtectedRoute/>}>
             <Route path="/trip-booking" element={<Tripbooking/>}/>
             <Route path="/trip-payment" element={<Trippayment/>}/>

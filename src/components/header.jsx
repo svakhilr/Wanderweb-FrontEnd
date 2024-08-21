@@ -50,7 +50,7 @@ function Header() {
           <Link to='/'>  <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><IoHomeSharp />Home</li> </Link>
           <Link to ='/trips'>  <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><FaLocationArrow/>Trip</li></Link>
             <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><ImLocation2 />Destination</li>
-            <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><RiInformation2Fill/>About</li>
+          <Link to='/about-us'> <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><RiInformation2Fill/>About</li></Link>
             <li className='flex items-center gap-2 cursor-pointer hover:opacity-25'><RiContactsBook2Fill/>Contact</li>
         </ul>
         {isloggedin?
