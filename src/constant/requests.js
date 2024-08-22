@@ -1,4 +1,4 @@
-const BASEURL = 'http://65.1.92.55/api/'
+const BASEURL = 'https://wanderweb.online/api/'
 
 const requests = {
     tokenRefresh:BASEURL+"token/refresh/",
