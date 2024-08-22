@@ -9,17 +9,32 @@ import { ShimmerSimpleGallery } from "react-shimmer-effects";
 
 
 function Tripspage() {
-  const [isdropdown,setDropdown] = useState(false)
   const [filterdata,setFilterdata] = useState(null)
   const [sort,setSort]  = useState("default")
   const [tripdatas,setData] = useState(null)
-
+  console.log("trips",filterdata)
+  console.log("rendering")
   const getData = async()=>{
     const data = await fetch(requests.getTrips)
     const jsonData = await data.json()
     console.log(jsonData)
     setData(jsonData.data)
     setFilterdata(jsonData.data)
+  }
+
+  const sortData = (value)=>{
+    console.log("sorting",value)
+    if(value ==='asc'){
+      const datas = filterdata.sort((a,b)=> a.price_per_head-b.price_per_head)
+      setFilterdata(datas)
+    }
+
+    else if(value === 'desc'){
+      console.log("descc",filterdata)
+      const datas = filterdata.sort((a,b)=> b.price_per_head-a.price_per_head)
+      // console.log(datas.slice(0,2))
+      setFilterdata(datas)
+    }
   }
 
   useEffect(()=>{
@@ -31,12 +46,9 @@ function Tripspage() {
     const search = event.target.value.toLowerCase()
     const datas = tripdatas.filter((tripsata) =>  (tripsata.package_name.toLowerCase().includes(search)|| tripsata.location.toLowerCase().includes(search)))
     setFilterdata(datas)
-    console.log(datas)
+    console.log("filter",datas)
   }
   
-  // const handleDropdown = ()=>{
-  //   setDropdown(!isdropdown)
-  // }
 
   return (
     <div>
@@ -55,7 +67,7 @@ function Tripspage() {
                 <input className='w-[23rem] p-4 rounded-md' placeholder='Search by package name or location' onChange={filterData} />
                 </div>
                 <div className=' cursor-pointer relative '>
-                  <select value={sort} onChange={e => setSort(e.target.value)} className=' w-[23rem] pr-3 outline-none border-2  pl-2 py-3 '>
+                  <select value={sort} onChange={e => sortData(e.target.value)} className=' w-[23rem] pr-3 outline-none border-2  pl-2 py-3 '>
                   <option value="default">Sort By</option>
                   <option value="asc">Price: Low to High</option>
                   <option value="desc">Price:High to Low</option>
@@ -64,10 +76,9 @@ function Tripspage() {
                 </div>
             </div>
             {tripdatas?(
+      
                <div className='flex flex-wrap justify- mt-14 gap-[5.4rem]'>
-               {/* {Array(8).fill().map(() => <Packagecard/>)} */}
-               {filterdata.map((data)=>{ return( <Link to={`/tripdetail/${data.id}`}> <Packagecard key={data.id} data={data}/> </Link>)})}
-             {/* {Array(6).fill().map(() => <Packagecard/>)} */}
+               {filterdata.map((data)=>{ return( <Link key={data.id} to={`/tripdetail/${data.id}`}> <Packagecard  data={data}/> </Link>)})}
              </div>
             ):<ShimmerSimpleGallery card imageHeight={300} caption />}
           

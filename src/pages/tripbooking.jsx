@@ -14,7 +14,6 @@ function Tripbooking() {
     const params = new URLSearchParams(search);
     const tripId = params.get('trip-id')
     const navigate = useNavigate()
-    const request = requests.getTrips + tripId
     const [tripData, setTripdata] = useState(null)
     const [totalamount, setTotalamount] = useState(0)
     const [guestNumber, setGuestnumber] = useState(1)
@@ -80,10 +79,11 @@ function Tripbooking() {
 
 
     const fetchTripdetail = async () => {
+        const request = requests.getTrips + tripId
         try {
             const response = await fetch(request)
             const responseData = await response.json()
-            console.log(responseData)
+            console.log("detail",responseData)
             setTripdata(responseData.data)
             setTotalamount(responseData.data.price_per_head)
         }
@@ -108,7 +108,7 @@ function Tripbooking() {
         tripData ?
             (<div>
                 <div className='min-h-screen bg-cover relative' style={{ backgroundImage: `url(${bckg})` }}>
-                <p className='absolute font-metamise text-[8rem] top-[20rem] left-[10%]'>Make Your Trip On!!!!!</p>
+                <p className='absolute font-metamise text-center text-[5rem] md:text-[10rem] top-[17rem] left-[20%] md:left-[10%]'>Make Your Trip On!!!!!</p>
                 <Header />
                 </div>
                 <div className='my-6  mb-16 px-14'>
@@ -139,11 +139,11 @@ function Tripbooking() {
                             <div className='hidden md:flex justify-between'>
                                 <div>
                                     <p className='md:text-3xl mb-10 ml-8'>Location</p>
-                                    <p className='border-2 cursor-pointer w-[14rem] py-8 text-center rounded-md text-[1.4rem] bg-gradient-to-r from-[#a3e635] to-[#176604] hover:from-[#f59e0b] hover:to-[#ea580c] '>Kerala</p>
+                                    <p className='border-2 cursor-pointer w-[14rem] py-8 text-center rounded-md text-[1.4rem] bg-gradient-to-r from-[#a3e635] to-[#176604] hover:from-[#f59e0b] hover:to-[#ea580c] '>{tripData.location}</p>
                                 </div>
                                 <div>
                                     <p className='text-3xl mb-10 ml-8'>Package</p>
-                                    <p className='border-2 cursor-pointer w-[14rem] py-8 text-center rounded-md text-[1.4rem] bg-gradient-to-r from-[#a3e635] to-[#176604] hover:from-[#f59e0b] hover:to-[#ea580c] '>Kashmir</p>
+                                    <p className='border-2 cursor-pointer w-[14rem] py-8 text-center rounded-md text-[1.4rem] bg-gradient-to-r from-[#a3e635] to-[#176604] hover:from-[#f59e0b] hover:to-[#ea580c] '>{tripData.package_name}</p>
                                 </div>
                             </div>
                             <div className='mt-14'>
