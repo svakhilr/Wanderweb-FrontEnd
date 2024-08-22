@@ -13,6 +13,7 @@
     "react-router": "^6.25.0",
     "react-router-dom": "^6.25.0",
     "react-scripts": "^5.0.1",
+    "react-shimmer-effects": "^1.0.3",
     "react-toastify": "^10.0.5",
     "yup": "^1.4.0"
   },

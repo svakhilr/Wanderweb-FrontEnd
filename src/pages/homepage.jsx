@@ -1,4 +1,3 @@
-import React,{useState} from 'react'
 import Header from '../components/header'
 import home from '../assets/home.png'
 import Travelcard from '../components/travelcard'
@@ -6,12 +5,12 @@ import Footer from '../components/footer'
 
 
 function Homepage() {
-  const [istoggle,setToggle] = useState(false)
+  
   return (
     <div>
       <div className="min-h-screen bg-cover relative" style={{ backgroundImage: `url(${home})` }}>
         <Header />
-        <p className='absolute font-metamise  top-[20rem] md:top-[24rem] left-8 text-[4.6rem] md:text-6xl leading-tight'>Enjoy The Freedom Of <span className='text-[6rem] ml-5 md:text-[10rem]'>Limitless</span></p>
+        <p className='absolute font-metamise  top-[20rem] md:top-[24rem] left-8 text-[2.6rem]  md:text-6xl leading-tight'>Enjoy The Freedom Of <span className='text-[4.8rem] ml-5 md:text-[10rem]'>Limitless</span></p>
       </div>
       <div className='bg-gradient-to-r from-amber-200 to-orange-200 px-5'>
         <div className='pt-10  md:ml-40 md:pb-24 flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12'>

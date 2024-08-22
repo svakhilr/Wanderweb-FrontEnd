@@ -6,6 +6,8 @@ import requests from '../constant/requests'
 import { useFormik } from 'formik';
 import bookingSchema from '../schemas/bookingschema'
 import { useNavigate,createSearchParams } from 'react-router-dom'
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
+
 
 function Tripbooking() {
     const search = window.location.search;
@@ -193,7 +195,7 @@ function Tripbooking() {
                 </div>
                 <Footer />
             </div>) :
-            <></>
+            < ShimmerSimpleGallery card imageHeight={300} caption />
     )
 }
 

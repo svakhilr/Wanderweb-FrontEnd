@@ -5,6 +5,8 @@ import home from '../assets/ledakh.jpg'
 import requests from '../constant/requests';
 import { Link } from 'react-router-dom';
 import Packagecard from '../components/packagecards';
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
+
 
 function Tripspage() {
   const [isdropdown,setDropdown] = useState(false)
@@ -67,7 +69,7 @@ function Tripspage() {
                {filterdata.map((data)=>{ return( <Link to={`/tripdetail/${data.id}`}> <Packagecard key={data.id} data={data}/> </Link>)})}
              {/* {Array(6).fill().map(() => <Packagecard/>)} */}
              </div>
-            ):<h1>Loading</h1>}
+            ):<ShimmerSimpleGallery card imageHeight={300} caption />}
           
           
             

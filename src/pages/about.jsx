@@ -10,7 +10,7 @@ function About() {
             </div>
             <div className='md:px-[8rem] px-3  pt-[7rem] pb-[4rem] md:pb-[12rem]  bg-[#94dfff] md:flex gap-[24rem]'>
                 <div className='relative'>
-                    <img className='rounded-lg h-[18rem]' src='https://st2.depositphotos.com/1013513/7548/i/450/depositphotos_75481827-stock-photo-happy-family-jumping-together-on.jpg'/>
+                    <img className='md:rounded-lg md:h-[18rem]' src='https://st2.depositphotos.com/1013513/7548/i/450/depositphotos_75481827-stock-photo-happy-family-jumping-together-on.jpg'/>
                     <img className='md:absolute  md:h-[16rem] md:top-[50%] md:left-1/2 w-[420px] rounded-lg' src='https://img.traveltriangle.com/blog/wp-content/uploads/2018/03/family-travel-tips_23rd-oct.jpg'/>
                 </div>
                 <div className='md:basis-[40%] '>
