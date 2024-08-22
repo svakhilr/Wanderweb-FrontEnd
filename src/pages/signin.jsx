@@ -69,7 +69,7 @@ function Signin() {
     <div className='min-h-screen bg-cover relative' style={{ backgroundImage: `url(${bckg})` }}>
     <Header/>
     <div className='min-h-screen flex flex-col justify-center items-center'>
-    <div className='bg-gray-900 pb-7 shadow-lg rounded-md flex flex-col  justify-center items-center w-[30rem] bg-opacity-65'>
+    <div className='bg-gray-900 pb-7 shadow-lg rounded-md flex flex-col  justify-center items-center w-[20rem] md:w-[30rem] bg-opacity-65'>
     <p className='pt-8 text-white text-2xl'>Login</p>
     <form className='mt-10 flex flex-col w-[20rem] gap-5' onSubmit={handleSubmit}>
             <div>
