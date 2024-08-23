@@ -23,7 +23,10 @@ function Sidebar({istoggle,handletoggle}) {
           <Link to='/about-us'><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiInformation2Fill/>About</li></Link>
             <li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiContactsBook2Fill/>Contact</li>
             {isloggedin?
-          <Link to="/profile"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Profile</li> </Link>:
+          <>  
+          <Link to="/profile"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Profile</li> </Link>
+          <Link to="/profile/trips"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Orders</li> </Link>
+          </>:
           <Link to="/signin"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Sign In</li></Link>}
             
         </ul>

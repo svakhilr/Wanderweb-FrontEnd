@@ -11,7 +11,7 @@ function Profile() {
     <div>
         <Header/>
         <div className='min-h-screen bg-[#fdc5c5]'>
-           <div className='pt-48 px-28 flex gap-16'>
+           <div className='pt-48  md:px-28 md:flex gap-16'>
             <ProfileSidebar/>
             <Outlet/>
            </div>

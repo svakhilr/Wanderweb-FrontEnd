@@ -10,7 +10,7 @@ function Homepage() {
     <div>
       <div className="min-h-screen bg-cover relative" style={{ backgroundImage: `url(${home})` }}>
         <Header />
-        <p className='absolute font-metamise  top-[20rem] md:top-[24rem] left-8 text-[2.6rem]  md:text-6xl leading-tight'>Enjoy The Freedom Of <span className='text-[4.8rem] ml-5 md:text-[10rem]'>Limitless</span></p>
+        <p className='absolute font-metamise  top-[20rem] md:top-[24rem] left-8 text-[2.6rem]  md:text-6xl leading-tight'>Enjoy The Freedom Of <span className='text-[4rem] ml-5 md:text-[10rem]'>Limitless</span></p>
       </div>
       <div className='bg-gradient-to-r from-amber-200 to-orange-200 px-5'>
         <div className='pt-10  md:ml-40 md:pb-24 flex flex-col justify-center items-center gap-6 md:flex-row md:gap-12'>
@@ -22,7 +22,7 @@ function Homepage() {
             
             <form className='md:relative mt-9'>
               <input className='w-[100%] p-3 rounded-full pl-9' placeholder='wanderweb@gmail.com' />
-              <button className='sm:mt-3 md:absolute w-[100%] md:mt-0 md:w-auto md:right-0  px-7 py-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-700'>Chat With Us</button>
+              <button className='sm:mt-4 md:absolute w-[100%] md:mt-0 md:w-auto md:right-0  px-7 py-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-700'>Chat With Us</button>
             </form>
           </div>
           <div className=' shadow-lg shadow-cyan-500/50'>
