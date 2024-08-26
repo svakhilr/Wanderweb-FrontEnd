@@ -1,5 +1,6 @@
 import React,{useContext} from 'react'
 import { IoHomeSharp } from "react-icons/io5";
+import { FaPowerOff } from "react-icons/fa6";
 import { RiAliensFill,RiContactsBook2Fill,RiInformation2Fill } from "react-icons/ri";
 import { ImLocation2 } from "react-icons/im";
 import { FaLocationArrow } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 function Sidebar({istoggle,handletoggle}) {
-  const {isloggedin} = useContext(userContext)
+  const {isloggedin,logOut} = useContext(userContext)
   
   return (
     istoggle?
@@ -26,6 +27,7 @@ function Sidebar({istoggle,handletoggle}) {
           <>  
           <Link to="/profile"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Profile</li> </Link>
           <Link to="/profile/trips"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Orders</li> </Link>
+          <li onClick={logOut} className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><FaPowerOff />Logout</li>
           </>:
           <Link to="/signin"><li className='flex items-center gap-2 cursor-pointer hover:opacity-25 mb-4'><RiAliensFill/>Sign In</li></Link>}
             
